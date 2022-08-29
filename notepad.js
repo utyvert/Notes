@@ -134,3 +134,39 @@ const makePlusFunction = (base) => {
 // console.log(plusFive(plusTen(0)))
 //  // should log 15
 
+// FIND MODE
+
+// Given an array, return its mode (the number that appears most often)
+// If there is a tie, return the greater number of tied modes.
+// ex. mode([1,1,2,2,3,3,2,4,5]) === 2 // true because 2 appears most often in the array (the number 2 appears 3 times)
+// ex. mode([1,1,1,3,3,3]) === 3 // true, because 3 and 1 are tied as the mode, but 3 > 1 and the mode function will return the greater of the mode values
+function mode(array) {
+  let cache = {};
+  for (let i of array) {
+    if (!cache[i]) cache[i] = 0;
+    cache[i]++; 
+  }
+  
+  let index = 0;
+  let max = cache[0]
+
+  for (let x in cache){
+    if (cache[x] > max) {
+      max = cache[x];
+      index = x;
+    }
+  }
+
+  return cache[index];
+}
+
+// Extension: solve this in 0(n) time
+
+function modeTests() {
+  console.log(mode([1,2,2,1,1,3, 7, 3]), ' -> 1');
+  console.log(mode([1]), '1');
+  console.log(mode([2, 2, 2, 2, 3, 3, 3]), ' -> 2');
+}
+
+
+modeTests() // uncomment to test!
