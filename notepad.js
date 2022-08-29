@@ -169,4 +169,44 @@ function modeTests() {
 }
 
 
-modeTests() // uncomment to test!
+// modeTests() // uncomment to test! UNFINISHED
+
+
+
+
+// Create a function that allows the following to occur:
+
+function createBase(num) {
+
+
+  return function (num2) {
+    
+    return num2 + num
+
+  }
+}
+
+const createBaseCumulative = (num) => {
+
+  sum = num;
+
+  return function (num2) {
+    sum += num2;
+
+    return sum;
+
+  }
+}
+
+
+
+// let addSix = createBase(6);
+// console.log(addSix(10), ', should log 16');
+// console.log(addSix(21), 'should log 27');
+
+// // Now create a new version of your function so it returns as follows:
+// let cumulativeSum = createBaseCumulative(6)
+// console.log(cumulativeSum(10), ', should log 16');
+// console.log(cumulativeSum(21), ', should log 37');
+
+
