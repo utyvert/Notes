@@ -67,6 +67,70 @@ function isLetter(char) { // checks if input character is a special character or
 
 
 
-console.log(palindrome("Anne, I vote more cars race Rome-to-Vienna")); //-> true
-console.log(palindrome("llama mall")); //-> true
-console.log(palindrome("jmoney")); //-> false
+// console.log(palindrome("Anne, I vote more cars race Rome-to-Vienna")); //-> true
+// console.log(palindrome("llama mall")); //-> true
+// console.log(palindrome("jmoney")); //-> false
+
+// RECURSION ALGO:
+// Create a function called halveCount, which accepts two integers (numA and numB) and returns how many times numA can be halved while still being greater than numB.
+// Notes: numA will always be at least greater than the twice of numB.
+// You are expected to solve this challenge via a recursive approach.
+
+
+
+const halveCount = (numA, numB, counter = 0) => {
+  // base case: if 1/2 of numA < numB, return counter;
+  if ((numA/2) < numB) return counter;
+  // recursive case: 
+  return halveCount(numA / 2, numB, counter + 1)
+  // return function with numA / 2, counter + 1
+}
+
+
+
+
+
+
+
+// // TESTS:
+// console.log(halveCount(4666, 544)) //should log 3
+// // (4666 -> 2333 -> 1166.5 -> 583.25)
+// console.log(halveCount(466, 54)) //should log 3
+// // (466 -> 233 -> 116.5 -> 58.25)
+// console.log(halveCount(1324, 98)) //should log 3
+// // (1324 -> 662 -> 331 -> 165.5)
+// console.log(halveCount(624, 8)) //should log 6
+// // (624 -> 312 -> 156 -> 78 -> 39 -> 19.5 -> 9.75)
+// console.log (halveCount(1000, 3)) //should log 8
+// (1000 -> 500 -> 250 -> 125 -> 62.5 -> 31.25 -> 15.625 -> 7.8125 -> 3.90625)
+
+// CLOSURE ALGO:
+// Create a function called makePlusFunction, which takes a “base number” as an argument.
+// This function should return another function which takes a new argument,
+// and returns the sum of the “base number” and the new argument.
+// TESTS:
+
+const makePlusFunction = (base) => {
+
+  return function (num2) {
+
+    return base + num2;
+
+  }
+}
+
+
+
+// const plusFive = makePlusFunction(5)
+// const plusTen = makePlusFunction(10)
+// console.log(plusFive(2))
+//  // should log 7
+// console.log(plusFive(-8))
+//  // should log -3
+// console.log(plusTen(0))
+//  // should log 10
+// console.log(plusTen(188))
+//  // should log 198
+// console.log(plusFive(plusTen(0)))
+//  // should log 15
+
