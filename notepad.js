@@ -242,36 +242,10 @@ function count (string) {
 // console.log(count("aba"))
 
 function findOutlier(integers){
-  let isEven = false;
-  let evenCounter = 0;
-  let oddCounter = 0;
-
-  for (let i = 0; i < integers.length; i++) {
-    if (integers[i] % 2 === 0){
-      evenCounter++;
-    } else if (integers[i] % 2 === 1) {
-      oddCounter++;
-    }
-    if (evenCounter > 1) {
-      isEven = true;
-      break;
-    } else if (oddCounter > 1) {
-      isEven = false;
-      break;
-    }
-  }
+  isEven = integers.filter(i => i % 2 === 0).length > 2 ? true : false 
+  return isEven;
 
 
-  for (let j = 0; j < integers.length; j++){
-    if (isEven === true) {
-      if (integers[j] % 2 !== 0) {
-        return integers[j];
-      }
-    } else if (isEven === false) {
-      if (integers[j] % 2 !== 1) {
-        return integers[j];
-      }
-    }
-  }
- }
-console.log(findOutlier([1, 2, 3])) //2
+}
+
+console.log(findOutlier([2,3,4]))
