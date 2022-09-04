@@ -242,10 +242,53 @@ function count (string) {
 // console.log(count("aba"))
 
 function findOutlier(integers){
-  isEven = integers.filter(i => i % 2 === 0).length > 2 ? true : false 
-  return isEven;
-
-
+  evenCheck = integers.filter(i => i % 2 === 0).length >= 2 ? true : false
+  for (let i = 0; i < integers.length; i++) {
+    if (evenCheck){
+      if (!isEven(integers[i])) {
+        return integers[i]
+      }
+    } else {
+      if (isEven(integers[i])) {
+        return integers[i]
+      }
+    }
+  }
 }
 
-console.log(findOutlier([2,3,4]))
+function isEven(int) {
+  if (int % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+// console.log(findOutlier([3,4,5]))
+
+
+function persistance(num) {
+  let counter = 0;
+  cache = num.toString().split('')
+  numArr = num.toString().split('')
+  // console.log(cache)
+  
+  while (cache.length > 1) {
+    let accu = 1;
+    for (let i = 0; i < cache.length; i++) {
+      accu = accu * Number(cache[i])
+      
+    }
+    // console.log('this is the accu ' + accu)
+    cache = accu.toString()
+    // console.log('This is the cache: ' + cache)
+    counter++;
+  }
+
+  return counter;
+}
+
+
+console.log(persistance(999))
