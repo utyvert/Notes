@@ -219,4 +219,59 @@ function findElement(arr, func) {
   }
 }
 
-console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+// console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+
+
+function count (string) {  
+  stringArr = string.split('')
+  const cache = {};
+
+
+  for (let i = 0; i < stringArr.length; i++) {
+    if (!cache[stringArr[i]]) {
+      cache[stringArr[i]] = 0
+    }
+      cache[stringArr[i]]++;
+
+  }
+  
+  return cache;
+}
+
+
+// console.log(count("aba"))
+
+function findOutlier(integers){
+  let isEven = false;
+  let evenCounter = 0;
+  let oddCounter = 0;
+
+  for (let i = 0; i < integers.length; i++) {
+    if (integers[i] % 2 === 0){
+      evenCounter++;
+    } else if (integers[i] % 2 === 1) {
+      oddCounter++;
+    }
+    if (evenCounter > 1) {
+      isEven = true;
+      break;
+    } else if (oddCounter > 1) {
+      isEven = false;
+      break;
+    }
+  }
+
+
+  for (let j = 0; j < integers.length; j++){
+    if (isEven === true) {
+      if (integers[j] % 2 !== 0) {
+        return integers[j];
+      }
+    } else if (isEven === false) {
+      if (integers[j] % 2 !== 1) {
+        return integers[j];
+      }
+    }
+  }
+ }
+console.log(findOutlier([1, 2, 3])) //2
