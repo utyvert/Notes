@@ -17,17 +17,17 @@ const user2 = {};
 
 user2.name = "Tim"
 user2.score = 6;
-user2.increment = function() { //this is known as a method - not a function
+user2.increment = function() { // this is known as a method - not a function
   user2.score++;
 } 
 ```
 
 If a function is attached to an object - it is known as a 'method'.
 
-**Object.create** 
+## Object.create
 
 ```
-const user3 = Object.create(null) //Object.create always creates an empty object - it has nothing to do with null
+const user3 = Object.create(null) // Object.create always creates an empty object - it has nothing to do with null - you can leave null out
 
 user3.name = "Eva";
 user3.score = 9;
@@ -50,9 +50,22 @@ function userCreator(name, score) {
   newUser.increment = function() {
     newUser.score++;
   };
-  return newUser;
+  return newUser; // don't forget
 };
 
 const user1 = userCreater("Will", 3);
 const user2 = userCreator("Tim", 5);
 ```
+
+
+user1 and user2 in global memory are now objects.
+
+This is known as a factory function.
+
+**Pros:**
+
+Super simple to read and understand.
+
+**Cons:**
+
+Defines the increment method on every single object.
