@@ -1,7 +1,7 @@
 # Object Oriented Programming
 
 
-**Fundamental Goal in OOP:** Data and Functionality.
+**Fundamental Goal in OOP:** Data and Functionality. (with the hand movements)
 
 *In example:* User data is data / 'Increment' is functionality.
 
