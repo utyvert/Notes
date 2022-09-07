@@ -218,11 +218,17 @@ class UserCreator {
     this.name = name;
     this.score = score;
   }
-  increment() {
+  increment() { // gets put into the prototype - you don't have to write the code 'UserCreator.prototype.increment = this.score++" like you did previously
     this.score++;
   }
   login() {
     console.log('login')
   }
 }
+
+const user1 = new UserCreator('Eva', 9);
+
+user1.increment();
 ```
+
+**Anything outside the constructor - but inside the class - Javascript takes it and puts it in the prototype of UserCreator automatically**
