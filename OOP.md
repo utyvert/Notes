@@ -142,3 +142,60 @@ const user1 = new UserCreator('Eva', 9);
 
 user1.increment();
 ```
+
+## WHY
+
+StackOverflow answer:
+
+**Methods that inherit via the prototype chain can be changed universally for all instances, for example:**
+
+```
+
+function Class () {}
+Class.prototype.calc = function (a, b) {
+    return a + b;
+}
+
+// Create 2 instances:
+var ins1 = new Class(),
+    ins2 = new Class();
+
+// Test the calc method:
+console.log(ins1.calc(1,1), ins2.calc(1,1));
+// -> 2, 2
+
+// Change the prototype method
+Class.prototype.calc = function () {
+    var args = Array.prototype.slice.apply(arguments),
+        res = 0, c;
+
+    while (c = args.shift())
+        res += c;
+
+    return res; 
+}
+
+// Test the calc method:
+console.log(ins1.calc(1,1,1), ins2.calc(1,1,1));
+// -> 3, 3
+
+```
+
+Notice how changing the method applied to both instances? This is because ins1 and ins2 share the same calc() function. In order to do this with public methods created during construction, you'd have to assign the new method to each instance that has been created, which is an awkward task. This is because ins1 and ins2 would have their own, individually created calc() functions.
+
+
+Another side effect of creating methods inside the constructor is poorer performance. Each method has to be created every time the constructor function runs. Methods on the prototype chain are created once and then "inherited" by each instance. On the flip side of the coin, public methods have access to "private" variables, which isn't possible with inherited methods.
+
+
+As for your function Class() {} vs var Class = function () {} question, the former is "hoisted" to the top of the current scope before execution. For the latter, the variable declaration is hoisted, but not the assignment. For example:
+
+
+```
+// Error, fn is called before the function is assigned!
+fn();
+var fn = function () { alert("test!"); } 
+
+// Works as expected: the fn2 declaration is hoisted above the call
+fn2();
+function fn2() { alert("test!"); }
+```
