@@ -111,6 +111,34 @@ function userCreator(name, score) {
   newUser.score = score;
   ```
   ~~return newUser;~~
-  
+
 };
 
+Using 'new' automatically assigns the new object to 'this'
+
+All functions are objects.
+
+userCreator is a function - but it is also an object.
+
+## Prototype
+
+Prototype is an object inside the userCreator 'object'.
+
+```
+function UserCreator(name, score){
+  this.name = name;
+  this.score = score;
+}
+
+UserCreator.prototype.increment = function(){ // adds a method to the prototype object in UserCreator
+  this.score++;
+}
+
+UserCreator.prototype.login = function(){
+  console.log('login');
+}
+
+const user1 = new UserCreator('Eva', 9);
+
+user1.increment();
+```
