@@ -105,10 +105,12 @@ when you use 'new' - you do not have to write the following crossed off code.
 ```
 function userCreator(name, score) {
   ```
- ~~ const newUser = Object.create(userFunctionStore); ~~
+ ~~const newUser = Object.create(userFunctionStore);~~
   ```
   newUser.name = name;
   newUser.score = score;
   ```
   ~~return newUser;~~
+  
 };
+
