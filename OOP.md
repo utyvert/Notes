@@ -1,9 +1,9 @@
 # Object Oriented Programming
 
 
-**Fundamental Goal in OOP:** Data and Functionality
+**Fundamental Goal in OOP:** Data and Functionality.
 
-*In example:* User data is data / 'Increment' is functionality
+*In example:* User data is data / 'Increment' is functionality.
 
 Everytime you run a function in Javascript, you create a new execution context.
 
@@ -72,7 +72,7 @@ Defines the increment method on every single object.
 
 ```
 function userCreator(name, score) {
-  const newUser = Object.create(userFunctionStore);
+  const newUser = Object.create(userFunctionStore); //userFunctionStore is a 'bond' that can be accessed when an object is created in this way
   newUser.name = name;
   newUser.score = score;
   return newUser;
@@ -87,3 +87,28 @@ const user1 = userCreator('Will', 3);
 const user2 = userCreator('Tim', 5);
 user1.increment();
 ```
+
+userFunctionStore acts as a 'bond' that can be accessed when an object is created in this method. This is a singular function that can hold multiple methods, and is used instead of creating (see: millions) many duplications through the act of creating many users.
+
+**'bond** is known as the dunder proto: __ proto __ 
+
+## 'this.' rules
+
+**Rule 1:** Whenever you are executing a function that is attached to an object (like increment, known as a method), 'this' is always going to equal the object that the method is being called on.
+
+** Global variables are too messy and risky.
+
+## using 'new' to create an object
+
+when you use 'new' - you do not have to write the following crossed off code.
+
+```
+function userCreator(name, score) {
+  ```
+ ~~ const newUser = Object.create(userFunctionStore); ~~
+  ```
+  newUser.name = name;
+  newUser.score = score;
+  ```
+  ~~return newUser;~~
+};
