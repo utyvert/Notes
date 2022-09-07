@@ -199,3 +199,30 @@ var fn = function () { alert("test!"); }
 fn2();
 function fn2() { alert("test!"); }
 ```
+
+
+Question often asked - rebuild the 'new' keyboard - explain how *prototypal inheritance* works in Javascript.
+
+## Classes
+
+Introduced a new syntax for objects, prototypes, to make things easier to view and edit.
+
+Use keyword 'class'.
+
+Inside class - there is a reserved keyword 'constructor' - used to define the functionality you want to execute when you invoke that class. 
+
+Refer to previous code blocks - this is a rewrite of those.
+```
+class UserCreator {
+  constructor (name, score){
+    this.name = name;
+    this.score = score;
+  }
+  increment() {
+    this.score++;
+  }
+  login() {
+    console.log('login')
+  }
+}
+```
