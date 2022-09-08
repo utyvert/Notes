@@ -232,3 +232,34 @@ user1.increment();
 ```
 
 **Anything outside the constructor - but inside the class - Javascript takes it and puts it in the prototype of UserCreator automatically**
+
+
+## Using 'extends'
+
+'extends' is a reserved keyword. It is used to create a new class that accesses the same prototype as the original class - with different parameters.
+
+```
+class Person {
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+
+  describe () {
+    console.log(`I am ${this.name} and I am ${this.age} years old`);
+  }
+}
+
+
+class Programmer extends Person {
+  constructor (name, age, yearsOfExperience) {
+    super(name, age); // calls the constructor of the Person (the parent class)
+    
+    // Custom behavior
+    this.yearsOfExperience = yearsOfExperience
+  }
+}
+
+const person1 = new Person('Jeff', 45);
+const programmer1 = new Programmer('Dom', 56, 12);
+```
