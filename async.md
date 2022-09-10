@@ -130,3 +130,13 @@ futureData.then(display);
 blockFor300ms()
 console.log('Me first!');
 ```
+
+
+# HTTP Requests
+
+HTTP Requests are used to get data from other servers (Twitter, Spotify, etc).
+
+We make these requests to API endpoints.
+
+We receive data in the form of a JSON, which looks very much like a Javascript object.
+
