@@ -8,6 +8,13 @@ So what if we need to **wait some time before we can execute certain bits of cod
 
 We have a conundrum - a tension between wanting to **delay some code execution but not wanting to block the thread** from any further code running while we wait.
 
+Instead of having a function block code from running (say, fetching from an API) - we pass it in as a callback to another function that acts asynchronously, allowing other code to run (oft using setTimeout, etc).
+
+![diagram](async-dia.png)
+
+
+**PPT Notes**
+
 What if we have a task:
 
 - Accessing Twitter's server to get new tweets that takes a long time
