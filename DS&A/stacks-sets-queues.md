@@ -20,3 +20,6 @@ The set data structure is like an array - except there are *no duplicate items* 
 
 The queue data structure is similar to a stack - but instead of Last In, First Out, it is First In, First Out. It is much like a queue at the supermarket.
 
+## Priority Queue
+
+In a priority queue, you pass in an element AND its priority. If all the priorities are the same number, the queue behaves like a normal queue. If there are different priorities, then they are passed in by priority.
