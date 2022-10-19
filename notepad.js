@@ -303,3 +303,29 @@ function persistance(num) {
 
 // request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
 // request.send();
+
+// complete the function
+function solution(string) {
+  let finalString = ''
+  let arrString = string.split('')
+  for (i = 0; i < arrString.length; i++) {
+    finalString += arrString[i];
+    const temp = arrString[i+1];
+    if (isUpperCase(temp)) {
+      finalString += ' '
+    }
+  }
+  return finalString;
+}
+
+function isUpperCase(string) {
+  const uppLetter = string.toUpperCase();
+  if (uppLetter === string) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+console.log(solution('camelCase')) // 'camel Case'
