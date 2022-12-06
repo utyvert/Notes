@@ -12,7 +12,7 @@
 
 We will be storing user data using OOP.
 
-***Objects - store functions with their associated data!**
+## Objects - store functions with their associated data!
 
 This is the principle of encapsulation. Let's keep creating our objects.
 
@@ -30,7 +30,7 @@ const user1 = {
 user1.increment(); // user1.score => 4
 ```
 
-**Creating user2 using dot notation**
+### Creating user2 using dot notation
 
 - Declare an empty object
 - Add properties with dot notation
@@ -46,7 +46,7 @@ user2.increment = function() {
 };
 ```
 
-**Creating user3 using Object.create**
+### Creating user3 using Object.create
 
 - Object.create is going to give us fine-grained control over our object later on.
 
