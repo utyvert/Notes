@@ -236,7 +236,7 @@ user1.increment();
 
 ### Solution 1: 
 Adding functionality on each user Object (violated our 3 golden rules of OOP)
-
+`
 ### Solution 2: 
 Create a global function Store (Bad practice to have global variables)
 
