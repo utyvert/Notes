@@ -328,4 +328,48 @@ function isUpperCase(string) {
 }
 
 
-console.log(solution('camelCase')) // 'camel Case'
+// console.log(solution('camelCase')) // 'camel Case'
+
+
+function isValidIP(str) {
+  let array = str.split('.')
+  let isValid = true;
+  console.log(array)
+  
+
+
+  if (array.length !== 4) {
+    return false;
+  }
+
+
+  
+  for (let i = 0; i < array.length; i++) {
+
+
+    if (isNaN((Number(array[i])))) return false;
+
+
+    if (Number(array[i]) < 0 || Number(array[i] > 255)) {
+      return false;
+    }
+
+    if (array[i][0] === '0' && array[i][1] !== undefined) {
+      return false;
+    }
+
+  }
+
+
+
+  
+  return true;
+}
+
+// console.log(isValidIP('1.2.3.4')) //true
+// console.log(isValidIP('123.45.67.89')) //true
+// console.log(isValidIP('1.2.3')) //false
+// console.log(isValidIP('1.2.3.4.5')) //false
+// console.log(isValidIP('1.02.03.04')) //false
+console.log(isValidIP('0.0.0.0')) 
+console.log(isValidIP('abv.cda.adf.fda')) 
