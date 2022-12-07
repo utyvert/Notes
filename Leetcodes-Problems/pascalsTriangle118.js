@@ -39,6 +39,7 @@ const generate = function(numRows) {
     return output;
 };
 
+
 console.log(generate(5)) // should outtput '[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]'
 console.log(generate(1)) // should ouput [[1]]
 

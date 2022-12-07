@@ -87,6 +87,7 @@ const cloneDeep = value => {
 }
 
 
+
 const value1 = {a: 1, b: 2, };
 const copy = new value1.constructor;
 console.log(value1); // {a: 1, b: 2}
