@@ -39,8 +39,10 @@ const users = [{'user':'barney'}, {'user': 'fred'}];
 ### Deep Clone
 [...]
 
+**shallowClone example**
+
 ```js
-// shallowClone example
+// shallowClone example unfinished
 
 let ogObj = {
   greeting: 'hello'
