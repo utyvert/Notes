@@ -4,7 +4,7 @@
 
 An array can be used to create a stack in Javascript.
 
-```
+```js
 var letters = []; // this is our stack
 
 var word = "freeCodeCamp"
@@ -74,7 +74,7 @@ ES6 has a built in set object - does not contain all of the methods that are com
 
 The set data structure is like an array - except there are *no duplicate items* - they are in no particular order. The typical use of a set is to check for the presence of an item.
 
-```
+```js
 function mySet() {
     // the var collection will hold the set
     var collection = [];
@@ -156,7 +156,7 @@ function mySet() {
 
 The queue data structure is similar to a stack - but instead of Last In, First Out, it is First In, First Out. It is much like a queue at the supermarket.
 
-```
+```js
 function Queue () { 
     collection = [];
     this.print = function() {
@@ -185,7 +185,7 @@ function Queue () {
 
 In a priority queue, you pass in an element AND its priority. If all the priorities are the same number, the queue behaves like a normal queue. If there are different priorities, then they are passed in by priority.
 
-```
+```js
 function PriorityQueue () {
     var collection = [];
     this.printCollection = function() {
