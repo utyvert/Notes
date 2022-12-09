@@ -79,7 +79,7 @@ const twoSum = function(nums, target) {
 [...]
 
 ## Trade-Offs
-
+`
 - Often when optimizing an algorithm, you will face a trade-off between space and time complexity
 - In modern times, we prioritize time complexity, as technology has advanced
 
