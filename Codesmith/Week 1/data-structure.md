@@ -158,8 +158,7 @@ b.num = 5;
 
 - A linked list is a collection of objects (called *nodes*), each of which has a reference (or *points to*) the next object in the list
 
-![Example](Week%201/Images/linkedlist.png)
-
+![Example](Images/linkedlist.png)
 ```js
 function Node(value) {
   this.value = val;
