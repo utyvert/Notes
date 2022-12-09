@@ -203,7 +203,7 @@ function LinkedList() {
 
 
 ### Simple Hash Function Diagram
-![Simple Hash Function](Week%201/Images/hash.png)
+![Simple Hash Function](/Codesmith/Week%201/Images/hash.png)
 
 
 ### What should a hash function do?
@@ -212,7 +212,7 @@ function LinkedList() {
 - [...]
 
 
-![](Week%201/Images/hasll.png)
+![](/Codesmith/Week%201/Images/hasll.png)
 
 ## Binary Search Trees (BST)
 
@@ -222,7 +222,7 @@ function LinkedList() {
   - The top most node is called the **root**, and the bottom most nodes for each parent, which point to null (no values) are called **leaf** nodes.
   - A BST always has a left and right node (binary, two options).
 
-![](Week%201/Images/BST.png)
+![](/Codesmith/Week%201/Images/BST.png)
 
 ### Traversal
 
