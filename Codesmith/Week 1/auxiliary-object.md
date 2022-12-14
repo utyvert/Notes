@@ -1,4 +1,21 @@
-# Auxiliary Object
+# Auxiliary Objects
+
+- [Auxiliary Objects](#auxiliary-objects)
+  - [Remove Dupe](#remove-dupe)
+    - [Naive approach without using auxiliary object](#naive-approach-without-using-auxiliary-object)
+    - [Approach while using auxiliary object](#approach-while-using-auxiliary-object)
+    - [Method 3:](#method-3)
+  - [Union](#union)
+    - [Using Set](#using-set)
+  - [MaxChar](#maxchar)
+    - [using Map](#using-map)
+  - [Two Sum](#two-sum)
+    - [Naive approach - O(n^2):](#naive-approach---on2)
+    - [Using Set - O(n)](#using-set---on)
+  - [Nth Fibonacci](#nth-fibonacci)
+    - [Naive (O(2^n))](#naive-o2n)
+    - [Using auxiliary object (linear):](#using-auxiliary-object-linear)
+
 
 ## Remove Dupe
 

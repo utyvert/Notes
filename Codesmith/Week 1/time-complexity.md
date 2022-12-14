@@ -1,5 +1,18 @@
 # Time Complexity
 
+- [Time Complexity](#time-complexity)
+  - [Algorithms](#algorithms)
+  - [What is Time Complexity?](#what-is-time-complexity)
+  - [Big O Notation](#big-o-notation)
+    - [Interpretations](#interpretations)
+    - [O(1) - Constant Time](#o1---constant-time)
+    - [O(n) - Linear Time](#on---linear-time)
+    - [O(n2)](#on2)
+  - [Space Complexity](#space-complexity)
+  - [Trade-Offs](#trade-offs)
+  - [Under The Hood](#under-the-hood)
+
+
 ## Algorithms 
 [...]
 

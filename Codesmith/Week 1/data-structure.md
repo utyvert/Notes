@@ -1,5 +1,30 @@
 # Data Structures
 
+- [Data Structures](#data-structures)
+  - [Dynamic Typing](#dynamic-typing)
+    - [Type Coercion](#type-coercion)
+    - [Type Systems: Strong/Weak scale and Static/Dynamic Scale](#type-systems-strongweak-scale-and-staticdynamic-scale)
+  - [Primitive Types](#primitive-types)
+    - [Primitive Types and Immutability](#primitive-types-and-immutability)
+    - [Primitive Types are passed by Value](#primitive-types-are-passed-by-value)
+  - [Composite (Compound) Data Types](#composite-compound-data-types)
+    - [Object](#object)
+    - [Arrays](#arrays)
+    - [Composite Data Types are passed by reference](#composite-data-types-are-passed-by-reference)
+- [Data Structures (cont.)](#data-structures-cont)
+  - [Stacks: Last In, First Out](#stacks-last-in-first-out)
+  - [Queues: First In, First Out](#queues-first-in-first-out)
+  - [Linked List](#linked-list)
+    - [Linked List - Entry Points: Head \& Tail](#linked-list---entry-points-head--tail)
+    - [Handling Nodes in the Middle](#handling-nodes-in-the-middle)
+  - [Linked Lists vs Arrays](#linked-lists-vs-arrays)
+  - [Hash Tables](#hash-tables)
+    - [Simple Hash Function Diagram](#simple-hash-function-diagram)
+    - [What should a hash function do?](#what-should-a-hash-function-do)
+  - [Binary Search Trees (BST)](#binary-search-trees-bst)
+    - [Traversal](#traversal)
+
+
 [...]
 
 

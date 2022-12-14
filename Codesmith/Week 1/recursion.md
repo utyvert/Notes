@@ -1,5 +1,20 @@
 # Recursion
 
+- [Recursion](#recursion)
+  - [Why use recursion?](#why-use-recursion)
+    - [Imperative vs Declarative](#imperative-vs-declarative)
+    - [How vs What](#how-vs-what)
+  - [Recursive functions are frequently more readable, maintanable, and easier to understand.](#recursive-functions-are-frequently-more-readable-maintanable-and-easier-to-understand)
+    - [Why?](#why)
+    - [Factorial: Option 1](#factorial-option-1)
+    - [Factorial: Option 2](#factorial-option-2)
+    - [Factorial: Option #3](#factorial-option-3)
+  - [Linear Recursion](#linear-recursion)
+  - [Tail Call Recursion](#tail-call-recursion)
+  - [Mutual Recursion](#mutual-recursion)
+  - [Tree Recursion](#tree-recursion)
+
+
 ## Why use recursion?
 
 ### Imperative vs Declarative

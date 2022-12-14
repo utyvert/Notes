@@ -1,5 +1,14 @@
 # Async Javascript
 
+- [Async Javascript](#async-javascript)
+- [Asynchronicity is the backbone of modern web development in Javascript](#asynchronicity-is-the-backbone-of-modern-web-development-in-javascript)
+- [What if we try to delay a function directly using setTimeout?](#what-if-we-try-to-delay-a-function-directly-using-settimeout)
+  - [ES5 solution: Introducing 'callback functions', and web browser APIs](#es5-solution-introducing-callback-functions-and-web-browser-apis)
+  - [ES6+ solution - Promises](#es6-solution---promises)
+  - [*then* method and functionality to call on completion](#then-method-and-functionality-to-call-on-completion)
+- [HTTP Requests](#http-requests)
+
+
 # Asynchronicity is the backbone of modern web development in Javascript
 
 Javascript is single threaded (one command executing at a time) and has a synchronous execution model (each line is executed in the order the code appears).

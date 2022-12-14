@@ -1,5 +1,16 @@
 # Approach Lecture: JS Fundamentals solutions
 
+- [Approach Lecture: JS Fundamentals solutions](#approach-lecture-js-fundamentals-solutions)
+  - [Memoization](#memoization)
+  - [Spread vs Rest](#spread-vs-rest)
+  - [Pass by Reference vs Value](#pass-by-reference-vs-value)
+  - [Shallow vs Deep Clones](#shallow-vs-deep-clones)
+    - [Shallow Clone](#shallow-clone)
+    - [Deep Clone](#deep-clone)
+  - [Throttling](#throttling)
+    - [Why do we need throttling?](#why-do-we-need-throttling)
+
+
 
 ## Memoization
 

@@ -1,5 +1,27 @@
 # Object-Oriented Programming
 
+- [Object-Oriented Programming](#object-oriented-programming)
+  - [Classes, Prototypes, \& Object-Oriented Programming](#classes-prototypes--object-oriented-programming)
+    - [An enormously popular paradigm for structuring our complex code.](#an-enormously-popular-paradigm-for-structuring-our-complex-code)
+  - [Quiz Game](#quiz-game)
+    - [Objects - store functions with their associated data!](#objects---store-functions-with-their-associated-data)
+    - [Creating user2 using dot notation](#creating-user2-using-dot-notation)
+    - [Creating user3 using Object.create](#creating-user3-using-objectcreate)
+  - [Solution 1](#solution-1)
+    - [Generate objects using a function](#generate-objects-using-a-function)
+  - [Solution 2: Using the prototype chain](#solution-2-using-the-prototype-chain)
+    - [Problem](#problem)
+  - [The ***new*** keyword automates a lot of our manual work](#the-new-keyword-automates-a-lot-of-our-manual-work)
+  - [Interlude - functions are both objects and functions](#interlude---functions-are-both-objects-and-functions)
+    - [Solution 3 completed using ***new*** keyword](#solution-3-completed-using-new-keyword)
+  - [Solution 4: The **class** 'syntactic sugar'](#solution-4-the-class-syntactic-sugar)
+- [Review](#review)
+    - [Solution 1:](#solution-1-1)
+    - [Solution 2:](#solution-2)
+    - [Solution 3:](#solution-3)
+    - [Solution 4:](#solution-4)
+
+
 ## Classes, Prototypes, & Object-Oriented Programming
 
 ### An enormously popular paradigm for structuring our complex code.
