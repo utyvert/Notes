@@ -74,3 +74,128 @@ Redux provides a stripped down version of flux architecture
 
 ![](Images/reducers.png)
 
+
+## Actions, Reducers, Stores
+
+### Action
+```js
+dispatch({
+  type: CHANGE_COUNT,
+  payload: 5
+})
+```
+
+### Reducers
+
+```js
+const initialState = {count: 0}
+
+function countReducer(state = initialState, action) {
+  switch(action.type) {
+    case CHANGE_COUNT:
+      return Object.assign({}, state, {count: action.payload})
+    default:
+      return state;
+  }
+}
+```
+
+### Stores
+
+index.js
+```js
+import {combineReducers} from 'redux';
+import countReducer from './countReducers.js';
+import userReducer from './userReducer.js';
+
+const reducers = combineReducers({
+  count:countReducer,
+  user:userReducer
+})
+
+export default reducers;
+```
+
+store.js
+```js
+import {createStore} from 'redux';
+import reducers from './index.js';
+
+const store = createStore(reducers);
+
+export default store;
+```
+
+How do we make this available to the app?
+
+1. Import **Provider** from react-redux, the store from store.js, and your top level component (app)
+2. Wrap your top level component in the **Provider** component
+3. Pass the store as a JSX attribute (like a prop) into the Provider wrap
+
+```js
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+import App from './components/App'
+import store from './store.js'
+
+render(
+  <Provider store = {store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+)
+```
+
+
+## mapStateToProps 
+
+A pure function that recieves **state** as an argument and returns an objects listing any properties of state that the component wants to subscribe to.
+
+Those keys will then be passed as props to the component they are connected to.
+
+Box.jsx
+
+```js
+const mapStateToProps = state => (
+  {
+    counter: state.counter.count // gives these props to Box.jsx, this turns to 'this.props.counter'
+    user: state.user
+  }
+)
+```
+
+## mapDispatchToProps
+
+A pure function that receives **dispatch** as an argument and reutnrs an object containing event handlers.
+- These event handlers can be passed to events (onClick, onChange, etc)
+- When invoked, these event handlers will **dispatch actions**
+- This is accomplished by invoking **action creators** that will return action objects, which are passed into dispatch
+
+```js
+const mapDispatchToProps = dispatch => (
+  {
+    increment: () => dispatch(incrementActionCreator()),
+    decrement: () => dispatch(decrementActionCreator())
+  }
+)
+```
+
+Once these functions have been defined, they should be passed to the **connect** function that we import from react-redux. This ties our component to the redux store.
+
+Box.jsx
+```js
+import {connect} from 'react-redux';
+
+export default connect(mapStateToProps, mapDispatchToProps)(<Box />)
+```
+
+
+## Action Creators & Action Reducers
+
+![](Images/writeactioncreators.png)
+
+![](Images/actionsreducers.png)
+
+## React Redux Architecture
+
+![](Images/rrarchitecture.png)
