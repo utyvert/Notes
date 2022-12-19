@@ -22,6 +22,8 @@
   - [fetch](#fetch)
     - [GET](#get-1)
     - [POST](#post)
+- [Day 2](#day-2)
+    - [Sequential Computing](#sequential-computing)
 
 
 ## AJAX (Asynchronous Javascript and XML)
@@ -195,3 +197,11 @@ fetch ('https://example.com', {
     console.log(data)
   });
 ```
+
+# Day 2
+
+[...]
+
+### Sequential Computing
+
+Code running *sequentially* (one completing before the next starts).
