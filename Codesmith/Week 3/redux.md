@@ -1,5 +1,27 @@
 # Redux
 
+- [Redux](#redux)
+  - [Prop Drilling](#prop-drilling)
+  - [State management library](#state-management-library)
+  - [Observer Design Pattern](#observer-design-pattern)
+  - [Under the hood](#under-the-hood)
+  - [Flux](#flux)
+  - [Flux Data Flow](#flux-data-flow)
+  - [Redux Data Flow](#redux-data-flow)
+  - [The Golden Rules of Redux](#the-golden-rules-of-redux)
+    - [Stores](#stores)
+    - [Actions](#actions)
+    - [Reducers](#reducers)
+  - [Actions, Reducers, Stores](#actions-reducers-stores)
+    - [Action](#action)
+    - [Reducers](#reducers-1)
+    - [Stores](#stores-1)
+  - [mapStateToProps](#mapstatetoprops)
+  - [mapDispatchToProps](#mapdispatchtoprops)
+  - [Action Creators \& Action Reducers](#action-creators--action-reducers)
+  - [React Redux Architecture](#react-redux-architecture)
+
+
 ## Prop Drilling
 
 Redux allows us to avoid prop drilling.
