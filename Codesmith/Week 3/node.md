@@ -1,5 +1,46 @@
 # Node
 
+- [Node](#node)
+  - [What is a server?](#what-is-a-server)
+  - [What is Node?](#what-is-node)
+    - [Why is Node.js a good idea?](#why-is-nodejs-a-good-idea)
+    - [Javascript in the browser](#javascript-in-the-browser)
+    - [Javascript in Node](#javascript-in-node)
+    - [How is Node different from JS in the browser?](#how-is-node-different-from-js-in-the-browser)
+  - [Node Modules \& NPM](#node-modules--npm)
+    - [Why Modules?](#why-modules)
+    - [What are modules?](#what-are-modules)
+    - [Node Modules - What and Where?](#node-modules---what-and-where)
+    - [Using your own modules](#using-your-own-modules)
+    - [Using your own modules - named exprots](#using-your-own-modules---named-exprots)
+  - [NPM - Node Package Manager](#npm---node-package-manager)
+    - [Package Dependencies](#package-dependencies)
+  - [Node Server](#node-server)
+    - [Why create a server?](#why-create-a-server)
+    - [What is a server?](#what-is-a-server-1)
+    - [How do servers work?](#how-do-servers-work)
+    - [An intro to Event Emitters](#an-intro-to-event-emitters)
+  - [Streams](#streams)
+    - [Types of streams](#types-of-streams)
+  - [Postman](#postman)
+    - [What is Postman and why would I use it?](#what-is-postman-and-why-would-i-use-it)
+    - [Server example with pseudocode](#server-example-with-pseudocode)
+  - [Asynchronicity in Node](#asynchronicity-in-node)
+    - [Roadmap](#roadmap)
+    - [Codesmith wants to change their website](#codesmith-wants-to-change-their-website)
+      - [Tasks](#tasks)
+    - [Set up environment](#set-up-environment)
+    - [Connect to the DB](#connect-to-the-db)
+    - [Fetch the md file](#fetch-the-md-file)
+    - [Save the new article to the databse](#save-the-new-article-to-the-databse)
+    - [Database.js](#databasejs)
+    - [What's wrong with this?](#whats-wrong-with-this)
+  - [What is a Promise?](#what-is-a-promise)
+    - [Under the hood](#under-the-hood)
+    - [Promise Instance](#promise-instance)
+  - [Error Handlers](#error-handlers)
+
+
 ## What is a server? 
 
 A server is just a piece of software that can take a request and sends a response back.
@@ -201,3 +242,75 @@ Download Postman!!!
 ### Server example with pseudocode
 
 ![](Images/vsser.png)
+
+## Asynchronicity in Node
+
+###  Roadmap
+
+- Callbacks
+- How Promises help us avoid callback hell
+- Promise.all for parallel promise execution
+- Introduce async/await syntax
+
+### Codesmith wants to change their website
+####  Tasks
+1. Connect to DB
+2. Obtain a markdown file from the file system
+3. Save new article to the database
+
+
+### Set up environment
+
+```js
+const path = require('path');
+const fs = require('fs');
+const markdown = require('markdown');
+```
+
+### Connect to the DB
+
+![](Images/step1.png)
+
+### Fetch the md file
+
+![](Images/step2.png)
+
+### Save the new article to the databse
+
+![](Images/step3.png)
+
+### Database.js
+
+![](Images/db.js.png)
+
+
+### What's wrong with this?
+
+- Hard to read and see what's going on!
+  - The nesting is hard to follow! What if we had even more nesting?
+  - One homogeneous looking block of code
+- We aren't grouping related code together.
+  - Error handling happen separately in each callback!
+- Independent/concurrent asynchronous activity isn't performed simulataneously!
+
+
+
+
+## What is a Promise? 
+
+![](Images/promise.png)
+
+
+### Under the hood
+
+![](Images/hoodPromises.png)
+
+### Promise Instance
+
+![](Images/promiseinstance.png)
+
+
+## Error Handlers
+
+![](Images/errorhandlers.png)
+
