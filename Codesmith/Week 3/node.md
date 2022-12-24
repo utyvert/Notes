@@ -38,6 +38,7 @@
   - [What is a Promise?](#what-is-a-promise)
     - [Under the hood](#under-the-hood)
     - [Promise Instance](#promise-instance)
+    - [Chaining Promises](#chaining-promises)
   - [Error Handlers](#error-handlers)
 
 
@@ -309,6 +310,9 @@ const markdown = require('markdown');
 
 ![](Images/promiseinstance.png)
 
+### Chaining Promises
+
+![](Images/chainingpromises.png)
 
 ## Error Handlers
 
