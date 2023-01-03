@@ -1,5 +1,23 @@
 # MongoDB
 
+- [MongoDB](#mongodb)
+    - [MongoDB Document Store](#mongodb-document-store)
+    - [Nesting](#nesting)
+  - [Mongoose](#mongoose)
+    - [Mongoose Library Features](#mongoose-library-features)
+  - [CRUD in Mongoose](#crud-in-mongoose)
+    - [Read](#read)
+      - [Model.find vs Model.findOne](#modelfind-vs-modelfindone)
+    - [Create](#create)
+    - [Delete](#delete)
+    - [Update](#update)
+      - [Upsert](#upsert)
+  - [Review](#review)
+    - [MongoDB](#mongodb-1)
+    - [Combining SQL and MongoDB for item catalogue](#combining-sql-and-mongodb-for-item-catalogue)
+    - [Combining SQL and NoSQL](#combining-sql-and-nosql)
+    - [Conclusion](#conclusion)
+
 
 [...]
 
@@ -61,7 +79,7 @@ Model.find(conditions, [projection], [options]) . then(...);
 
 ![](images/mongo7.png)
 
-### Model.find vs Model.findOne
+#### Model.find vs Model.findOne
 
 ![](images/moongo8.png)
 
@@ -92,4 +110,39 @@ You can use Model.create on an array of objects
 ### Update
 
 ![](images/mongoupdate.png)
+
+![](images/mongoupdate2.png)
+
+#### Upsert
+
+![](images/upsert.png)
+
+
+## Review
+
+### MongoDB
+
+- SQL' strength is guaranteed referential integrity, which is critical for datasets. You don't want to run a complex application logic to fix consistency issues.
+- MongoDB's perforance can be used for certain parts of an application, but is unwieldy as a main database for highly relational information.
+- That being said, there are real life cases for MongoDB [...] (refer to slides)
+
+### Combining SQL and MongoDB for item catalogue
+
+![](images/mongo9.png)
+
+- Talk about this in interviews!
+
+### Combining SQL and NoSQL
+
+![](images/combiningmongo.png)
+
+
+### Conclusion
+
+- SQL is the go-to for maintaining relational data and should be used as a main database. It is the industry standard.
+- MongoDB (document store) is good as a supplement for specialized data:
+  - Catalogues with semi-flexible schema
+  - Data with a natural JSON-like representation
+  - Easy to embed/nest for read-heavy and not heavily relational situations
+- Primarily interact with MongoDB through the Mongoose library
 
